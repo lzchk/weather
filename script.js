@@ -19,10 +19,8 @@ if ("geolocation" in navigator){
             document.querySelector('.city').innerHTML = res.data.name
             // Вывод температуры
             document.querySelector('.temp').innerHTML = res.data.main.temp
-            // Вывод влажности
-            document.querySelector('.humidity').innerHTML = res.data.main.humidity
-            // Вывод скорости ветра
-            document.querySelector('.wind').innerHTML = res.data.wind.speed
+            // Вывод погоды: ветренно, снег и тд
+            document.querySelector('.main').innerHTML = res.data.weather[0].main
             })
         }
     );
