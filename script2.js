@@ -5,15 +5,20 @@ const api = '618f5df1d66c4ae555140ecb6052f6b3';
       if(e.keyCode === 13) {
         let city = $(this).val();
         console.log(city);
+
         let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${api}`;
         // Отправляем запрос с помощью axios, подключила его в ссылках
         axios.get(url).then(res => {
-        // Выводим результат в консоль браузера
-        var arr = res.data;
-        console.log(arr);
-        })
-      
 
+            // Выводим результат в консоль браузера
+            var arr = res.data;
+            console.log(arr);
+
+        })
+.catch(function (error) {
+    // handle error
+    alert("Такого города нет!");
+  })
         // Отправка GET запроса
         axios.get(url).then(res => {
         // Вывод города
