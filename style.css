@@ -14,6 +14,16 @@ body{
     height: 100vh;
 }
 
+input{
+    width: 20vw;
+    height: 4vh;
+    padding: 1vw;
+    border-radius: 1vw;
+    margin-top: 2vw;
+    border: 0px;
+    font-size: 1vw;
+}
+
 .ghost-font{
     color: rgba(255, 255, 255, 0.5);
 }
